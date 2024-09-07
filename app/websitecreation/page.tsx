@@ -10,6 +10,12 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { Calendar, ChevronRight, ChevronLeft, Menu, X, Star, ArrowRight } from "lucide-react"
 
 export default function WebsiteCreation() {
@@ -97,9 +103,8 @@ export default function WebsiteCreation() {
       document.removeEventListener('keydown', handleEscape)
     }
   }, [closeCalendly])
-"use client"
 
-return (
+  return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#000033] via-[#000066] to-[#0000CC] text-white">
       <header className="px-4 lg:px-6 h-16 flex items-center justify-between sticky top-0 z-50 backdrop-blur-md bg-opacity-80 bg-[#000033]">
         <motion.div 
@@ -109,13 +114,13 @@ return (
           transition={{ duration: 0.5 }}
         >
           <Image
-  src="/images/LargeSideLogo.png"
-  alt="Aoniqq Logo"
-  fill
-  className="object-contain"
-  sizes="(max-width: 768px) 144px, 144px"
-  priority
-/>
+            src="/images/LargeSideLogo.png"
+            alt="Aoniqq Logo"
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 144px, 144px"
+            priority
+          />
         </motion.div>
         <nav className="hidden md:flex gap-4 sm:gap-6">
           {['Portfolio', 'Testimonials', 'Contact'].map((item, index) => (
@@ -185,7 +190,7 @@ return (
                 </span>
                 <br />
                 <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 inline-block">
-                  in 48 hours
+                  in 24 hours
                 </span>
               </motion.h1>
               <motion.p 
@@ -195,7 +200,7 @@ return (
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <span className="font-bold text-white text-shadow-glow animate-pulse">
-                  Don&apos;t waste valuable time and money on foreign developers and long turnaround times
+                  Don&apos;t waste valuable time and money on low quality design, poor communication, and long turnaround times
                 </span>
               </motion.p>
               <motion.div
@@ -207,7 +212,7 @@ return (
                   className="bg-blue-600 hover:bg-blue-700 text-white transition-colors text-lg sm:text-xl md:text-2xl py-4 sm:py-6 px-6 sm:px-8 md:px-10 mt-4 sm:mt-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" 
                   onClick={openCalendly}
                 >
-                  Schedule a Call
+                  Schedule a Free Discovery Call
                   <motion.span
                     className="ml-2 inline-block"
                     animate={{ x: [0, 5, 0] }}
@@ -245,6 +250,18 @@ return (
                   alt: "Wall Street Vision Website",
                   title: "Wall Street Vision",
                   description: "A stock trading program with real-time market data and analysis tools."
+                },
+                {
+                  src: "/images/Weaksauce.png",
+                  alt: "Weaksauce Website",
+                  title: "Weaksauce",
+                  description: "A Hot Sauce Brand."
+                },
+                {
+                  src: "/images/DPE.png",
+                  alt: "DPE Foundation Website",
+                  title: "DPE Foundation",
+                  description: "A Nonprofit Organization."
                 },
                 {
                   src: "/images/Votepicozzi.png",
@@ -365,6 +382,58 @@ return (
           </div>
         </section>
 
+        <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-black/30">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <motion.h2 
+              className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Frequently Asked Questions
+            </motion.h2>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>How is this possible in 24 hours?</AccordionTrigger>
+                <AccordionContent>
+                  We've found an optimal balance between AI & human developers and copywriters to maximize efficiency while retaining quality.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>What if you deliver the website late?</AccordionTrigger>
+                <AccordionContent>
+                  We understand time is your most valuable resource, so we won&apos;t deliver late. If we do, we will offer you a full refund.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>How long have you been creating websites?</AccordionTrigger>
+                <AccordionContent>
+                  We've been designing, coding, and customizing websites for over 5 years.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>How do you ensure the quality of the website with a 24 hour turnaround?</AccordionTrigger>
+                <AccordionContent>
+                  Our team of developers and copywriters work together to ensure the website is of the highest quality, and a final quality assurance review is done before delivery.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>How many pages are included?</AccordionTrigger>
+                <AccordionContent>
+                  Our core offer includes 2 pages. However, we can discuss adding more pages for an additional fee on our discovery call.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-5">
+                <AccordionTrigger>Are revisions offered?</AccordionTrigger>
+                <AccordionContent>
+                  Yes, we will ensure you&apos;re 100% satisfied with the finished website before project completion.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </section>
+
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-black/30">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="flex flex-col items-center space-y-4 text-center">
@@ -384,7 +453,7 @@ return (
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                Book a call now to discuss your website needs and get a fully customized site in just 48 hours.
+                Book a call now to discuss your website needs and get a fully customized site in just 24 hours.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -396,7 +465,7 @@ return (
                   className="bg-blue-600 hover:bg-blue-700 text-white transition-colors text-xl py-6 px-10 mt-6 group" 
                   onClick={openCalendly}
                 >
-                  Schedule Your Free Consultation
+                  Schedule Your Free Discovery Call
                   <ChevronRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-1" />
                 </Button>
               </motion.div>
@@ -439,7 +508,7 @@ return (
             </Button>
             <div className="p-4 text-center bg-white border-b border-gray-200">
               <h2 className="text-2xl font-bold mb-2 text-gray-800">Schedule Your Website Consultation</h2>
-              <p className="text-lg text-gray-600">Get your fully customized website in just 48 hours!</p>
+              <p className="text-lg text-gray-600">Get your fully customized website in just 24 hours!</p>
             </div>
             <div className="h-[calc(100%-5rem)] overflow-y-auto">
               <iframe
