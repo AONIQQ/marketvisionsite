@@ -397,7 +397,7 @@ export default function WebsiteCreation() {
               <AccordionItem value="item-1">
                 <AccordionTrigger>How is this possible in 24 hours?</AccordionTrigger>
                 <AccordionContent>
-                  We've found an optimal balance between AI & human developers and copywriters to maximize efficiency while retaining quality.
+                  We&apos;ve found an optimal balance between AI & human developers and copywriters to maximize efficiency while retaining quality.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
@@ -409,7 +409,7 @@ export default function WebsiteCreation() {
               <AccordionItem value="item-3">
                 <AccordionTrigger>How long have you been creating websites?</AccordionTrigger>
                 <AccordionContent>
-                  We've been designing, coding, and customizing websites for over 5 years.
+                  We&apos;ve been designing, coding, and customizing websites for over 5 years.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
