@@ -16,7 +16,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { Calendar, ChevronRight, ChevronLeft, Menu, X, Star, ArrowRight } from "lucide-react"
+import { Calendar, ChevronRight, ChevronLeft, Menu, X, Star, ArrowRight, DollarSign } from "lucide-react"
 
 export default function WebsiteCreation() {
   const [currentReview, setCurrentReview] = useState(0)
@@ -123,7 +123,7 @@ export default function WebsiteCreation() {
           />
         </motion.div>
         <nav className="hidden md:flex gap-4 sm:gap-6">
-          {['Portfolio', 'Testimonials', 'Contact'].map((item, index) => (
+          {['Portfolio', 'Testimonials', 'Pricing', 'Contact'].map((item, index) => (
             <motion.a
               key={item}
               className="text-sm font-medium hover:text-blue-400 transition-colors relative"
@@ -158,7 +158,7 @@ export default function WebsiteCreation() {
               </Button>
             </div>
             <nav className="flex flex-col gap-4">
-              {['Portfolio', 'Testimonials', 'Contact'].map((item, index) => (
+              {['Portfolio', 'Testimonials', 'Pricing', 'Contact'].map((item, index) => (
                 <motion.a
                   key={item}
                   className="text-lg font-medium hover:text-blue-400 transition-colors"
@@ -200,13 +200,14 @@ export default function WebsiteCreation() {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <span className="font-bold text-white text-shadow-glow animate-pulse">
-                  Don&apos;t waste valuable time and money on low quality design, poor communication, and long turnaround times
+                  Don&apos;t waste valuable time and money on low quality design, poor communication, and long turnaround times. Functional website delivered in 24 hours or your money back
                 </span>
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
+                className="flex flex-col items-center"
               >
                 <Button 
                   className="bg-blue-600 hover:bg-blue-700 text-white transition-colors text-lg sm:text-xl md:text-2xl py-4 sm:py-6 px-6 sm:px-8 md:px-10 mt-4 sm:mt-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" 
@@ -221,6 +222,14 @@ export default function WebsiteCreation() {
                     <ArrowRight className="h-6 w-6" />
                   </motion.span>
                 </Button>
+                <motion.p
+                  className="mt-4 text-sm sm:text-base md:text-lg text-gray-300"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                >
+                Book a free call to explore how we can help you save time & money on your website
+                </motion.p>
               </motion.div>
             </div>
           </div>
@@ -382,7 +391,42 @@ export default function WebsiteCreation() {
           </div>
         </section>
 
-        <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-black/30">
+        <section id="pricing" className="w-full py-12 md:py-24 lg:py-32 bg-black/30">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <motion.h2 
+              className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Pricing
+            </motion.h2>
+            <motion.div
+              className="bg-blue-900/20 rounded-lg p-8 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">$1,000 - $3,000</h3>
+              <p className="text-lg md:text-xl mb-6">Our pricing is based on the complexity of the website you need, the number of pages, and the level of copywriting you need. We are happy to discuss custom pricing for more complex projects, or more urgent projects.</p>
+              <div className="flex items-center justify-center mb-6">
+                <p className="text-lg md:text-xl font-semibold">
+                  Get your website tomorrow for as little as $0 up front with 0% APR financing via Affirm
+                </p>
+              </div>
+              <Button 
+                className="bg-blue-600 hover:bg-blue-700 text-white transition-colors text-lg md:text-xl py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" 
+                onClick={openCalendly}
+              >
+                Book A Free Discovery Call
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+
+        <section id="faq" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 max-w-3xl">
             <motion.h2 
               className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12"
@@ -418,13 +462,13 @@ export default function WebsiteCreation() {
                   Our team of developers and copywriters work together to ensure the website is of the highest quality, and a final quality assurance review is done before delivery.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-4">
+              <AccordionItem value="item-5">
                 <AccordionTrigger>How many pages are included?</AccordionTrigger>
                 <AccordionContent>
                   Our core offer includes 2 pages. However, we can discuss adding more pages for an additional fee on our discovery call.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-5">
+              <AccordionItem value="item-6">
                 <AccordionTrigger>Are revisions offered?</AccordionTrigger>
                 <AccordionContent>
                   Yes, we will ensure you&apos;re 100% satisfied with the finished website before project completion.
