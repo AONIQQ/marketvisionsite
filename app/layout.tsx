@@ -29,7 +29,7 @@ export default function RootLayout({
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '521366960377690'); // Replace with your actual Pixel ID
+              fbq('init', '521366960377690'); 
               fbq('track', 'PageView');
             `,
           }}
@@ -43,6 +43,20 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Facebook Pixel Code */}
+
+        {/* Microsoft Clarity Tracking Code */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "nzpbsvhlnx");
+            `,
+          }}
+        />
+        {/* End Microsoft Clarity Tracking Code */}
       </head>
       <body className={inter.className}>{children}</body>
     </html>

@@ -101,13 +101,16 @@ export default function Component() {
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#000033] to-[#000066] text-white">
       <header className="px-4 lg:px-6 h-16 flex items-center justify-between">
         <div className="relative w-36 h-12">
-          <Image
-            src="/LargeSideLogo.png"
-            alt="Aoniqq Logo"
-            fill
-            className="object-contain"
-            priority
-          />
+        <div className="relative w-36 h-12">
+  <Image
+    src="/images/LargeSideLogo.png"
+    alt="Aoniqq Logo"
+    fill
+    className="object-contain"
+    sizes="(max-width: 768px) 144px, 144px"
+    priority
+  />
+</div>
         </div>
         <nav className="hidden md:flex gap-4 sm:gap-6">
           <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#services" onClick={handleNavClick}>
