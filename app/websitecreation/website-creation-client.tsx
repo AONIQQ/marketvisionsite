@@ -17,6 +17,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Calendar, ChevronRight, ChevronLeft, Menu, X, Star, ArrowRight, DollarSign } from "lucide-react"
+import Link from 'next/link'
 
 export default function WebsiteCreation() {
   const [currentReview, setCurrentReview] = useState(0)
@@ -107,21 +108,23 @@ export default function WebsiteCreation() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#000033] via-[#000066] to-[#0000CC] text-white">
       <header className="px-4 lg:px-6 h-16 flex items-center justify-between sticky top-0 z-50 backdrop-blur-md bg-opacity-80 bg-[#000033]">
-        <motion.div 
-          className="relative w-36 h-12"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Image
-            src="/images/LargeSideLogo.png"
-            alt="Aoniqq Logo"
-            fill
-            className="object-contain"
-            sizes="(max-width: 768px) 144px, 144px"
-            priority
-          />
-        </motion.div>
+        <Link href="/" passHref legacyBehavior>
+          <motion.a 
+            className="relative w-36 h-12"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Image
+              src="/images/LargeSideLogo.png"
+              alt="Aoniqq Logo"
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 144px, 144px"
+              priority
+            />
+          </motion.a>
+        </Link>
         <nav className="hidden md:flex gap-4 sm:gap-6">
           {['Portfolio', 'Testimonials', 'Pricing', 'Contact'].map((item, index) => (
             <motion.a
@@ -252,42 +255,51 @@ export default function WebsiteCreation() {
                   src: "/images/fastrack.png",
                   alt: "Fastrack Website",
                   title: "Fastrack",
-                  description: "A training business in the education sector."
+                  description: "A training business in the education sector.",
+                  url: "https://www.fastrack.school"
                 },
                 {
                   src: "/images/WSV.png",
                   alt: "Wall Street Vision Website",
                   title: "Wall Street Vision",
-                  description: "A stock trading program with real-time market data and analysis tools."
+                  description: "A stock trading program.",
+                  url: "https://www.Wallstreetvision.net"
                 },
                 {
                   src: "/images/Weaksauce.png",
                   alt: "Weaksauce Website",
                   title: "Weaksauce",
-                  description: "A Hot Sauce Brand."
+                  description: "A Hot Sauce Brand.",
+                  url: "https://www.weaksaucephilly.com"
                 },
                 {
                   src: "/images/DPE.png",
                   alt: "DPE Foundation Website",
                   title: "DPE Foundation",
-                  description: "A Nonprofit Organization."
+                  description: "A Nonprofit Organization.",
+                  url: "https://www.dpefoundation.org"
                 },
                 {
                   src: "/images/Votepicozzi.png",
                   alt: "VotePicozzi Website",
                   title: "VotePicozzi",
-                  description: "A political campaign website showcasing the candidate's platform and initiatives."
+                  description: "A political campaign website.",
+                  url: "https://www.Votepicozzi.com"
                 },
                 {
                   src: "/images/Remotetutoring.png",
                   alt: "Remote Tutoring Website",
                   title: "Remote Tutoring",
-                  description: "A chemistry tutoring business offering online sessions and resources."
+                  description: "A chemistry tutoring business.",
+                  url: "https://www.remotetutoring.com"
                 }
               ].map((project, index) => (
-                <motion.div 
+                <motion.a 
                   key={index} 
-                  className="bg-blue-900/20 rounded-lg overflow-hidden"
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-900/20 rounded-lg overflow-hidden block cursor-pointer"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -310,7 +322,7 @@ export default function WebsiteCreation() {
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                     <p className="text-gray-300">{project.description}</p>
                   </div>
-                </motion.div>
+                </motion.a>
               ))}
             </div>
           </div>

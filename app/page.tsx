@@ -10,6 +10,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Calendar, Code, Briefcase, ChevronRight, ChevronLeft, Menu, X, Star } from "lucide-react"
+import Link from 'next/link'
 
 export default function Component() {
   const [currentReview, setCurrentReview] = useState(0)
@@ -101,49 +102,55 @@ export default function Component() {
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#000033] to-[#000066] text-white">
       <header className="px-4 lg:px-6 h-16 flex items-center justify-between">
         <div className="relative w-36 h-12">
-        <div className="relative w-36 h-12">
-  <Image
-    src="/images/LargeSideLogo.png"
-    alt="Aoniqq Logo"
-    fill
-    className="object-contain"
-    sizes="(max-width: 768px) 144px, 144px"
-    priority
-  />
-</div>
+          <Image
+            src="/images/LargeSideLogo.png"
+            alt="Aoniqq Logo"
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 144px, 144px"
+            priority
+          />
         </div>
-        <nav className="hidden md:flex gap-4 sm:gap-6">
-          <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#services" onClick={handleNavClick}>
-            Services
-          </a>
-          <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#testimonials" onClick={handleNavClick}>
-            Testimonials
-          </a>
-          <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#contact" onClick={handleNavClick}>
-            Contact
-          </a>
-        </nav>
-        <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-  <SheetTrigger asChild>
-    <Button variant="outline" size="icon" className="md:hidden">
-      <Menu className="h-6 w-6" />
-      <span className="sr-only">Open menu</span>
-    </Button>
-  </SheetTrigger>
-  <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-[#000033] border-l border-blue-400/20">
-    <nav className="flex flex-col gap-4 mt-8">
-      <a className="text-lg font-medium hover:text-blue-400 transition-colors" href="#services" onClick={handleNavClick}>
-        Services
-      </a>
-      <a className="text-lg font-medium hover:text-blue-400 transition-colors" href="#testimonials" onClick={handleNavClick}>
-        Testimonials
-      </a>
-      <a className="text-lg font-medium hover:text-blue-400 transition-colors" href="#contact" onClick={handleNavClick}>
-        Contact
-      </a>
-    </nav>
-  </SheetContent>
-</Sheet>
+        <div className="flex items-center">
+          <Link href="/websitecreation" className="text-sm font-medium hover:text-blue-400 transition-colors mr-4">
+            24hr Website Creation
+          </Link>
+          <nav className="hidden md:flex gap-4 sm:gap-6">
+            <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#services" onClick={handleNavClick}>
+              Services
+            </a>
+            <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#testimonials" onClick={handleNavClick}>
+              Testimonials
+            </a>
+            <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#contact" onClick={handleNavClick}>
+              Contact
+            </a>
+          </nav>
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Open menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-[#000033] border-l border-blue-400/20">
+              <nav className="flex flex-col gap-4 mt-8">
+                <Link href="/websitecreation" className="text-lg font-medium hover:text-blue-400 transition-colors">
+                  24hr Website Creation
+                </Link>
+                <a className="text-lg font-medium hover:text-blue-400 transition-colors" href="#services" onClick={handleNavClick}>
+                  Services
+                </a>
+                <a className="text-lg font-medium hover:text-blue-400 transition-colors" href="#testimonials" onClick={handleNavClick}>
+                  Testimonials
+                </a>
+                <a className="text-lg font-medium hover:text-blue-400 transition-colors" href="#contact" onClick={handleNavClick}>
+                  Contact
+                </a>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </header>
       <main className="flex-1">
         <section className="w-full py-8 md:py-12">
@@ -178,21 +185,21 @@ export default function Component() {
                 <CardContent className="flex flex-col items-center p-6">
                   <Code className="h-12 w-12 mb-4 text-blue-400" />
                   <h3 className="text-xl font-bold mb-2 text-center">Full Stack Development</h3>
-                  <p className="text-center text-gray-300">We have built the technical aspects of various projects in different industries from the ground up, and are always researching and learning new technologies to make seamless platforms.</p>
+                  <p className="text-center text-gray-300">We have built the technical aspects of various projects in different industries from the ground up. We are constantly researching and learning new technologies to make seamless platforms. We've built everything from software as a service (SaaS) products, full scale custom applications and dashboards, algorithm systems, AI integration tools, to complex smart contract systems and more.</p>
                 </CardContent>
               </Card>
               <Card className="bg-blue-900/20 text-white border-blue-400/20 hover:border-blue-400/50 transition-colors">
                 <CardContent className="flex flex-col items-center p-6">
                   <Briefcase className="h-12 w-12 mb-4 text-blue-400" />
                   <h3 className="text-xl font-bold mb-2 text-center">Website Development</h3>
-                  <p className="text-center text-gray-300">We have a rich history in creating fast, responsive, and aesthetic websites for small businesses, ecommerce professionals, startups, foundations, politicians, and many others. We offer quick turnaround times and unlimited revisions.</p>
+                  <p className="text-center text-gray-300">We have a rich history in creating fast, responsive, and aesthetic websites for massive corporations, ecommerce brands, service professionals, startups, foundations, politicians, local businesses, and many others. Our core offer is centered around our ability to create a website that is tailored to your needs and to your brand in 24 hours, see more about this service <Link href="/websitecreation" className="text-blue-400 hover:text-blue-300">here</Link>.</p>
                 </CardContent>
               </Card>
               <Card className="bg-blue-900/20 text-white border-blue-400/20 hover:border-blue-400/50 transition-colors">
                 <CardContent className="flex flex-col items-center p-6">
                   <Calendar className="h-12 w-12 mb-4 text-blue-400" />
                   <h3 className="text-xl font-bold mb-2 text-center">Project Management and Consulting</h3>
-                  <p className="text-center text-gray-300">Our constant pursuit of new information and trends as well as our track record of success in multiple arenas makes us an excellent resource to provide consultation on or manage your project.</p>
+                  <p className="text-center text-gray-300">Our constant pursuit of new information and trends as well as our track record of success in multiple arenas makes us an excellent resource to provide consultation on or manage your project. We have experience in managing projects of all sizes. We are able to provide a comprehensive approach towards complex problems and roadblocks that businesses across a variety of sectors are facing.</p>
                 </CardContent>
               </Card>
             </div>
