@@ -185,14 +185,14 @@ export default function Component() {
                 <CardContent className="flex flex-col items-center p-6">
                   <Code className="h-12 w-12 mb-4 text-blue-400" />
                   <h3 className="text-xl font-bold mb-2 text-center">Full Stack Development</h3>
-                  <p className="text-center text-gray-300">We have built the technical aspects of various projects in different industries from the ground up. We are constantly researching and learning new technologies to make seamless platforms. We've built everything from software as a service (SaaS) products, full scale custom applications and dashboards, algorithm systems, AI integration tools, to complex smart contract systems and more.</p>
+                  <p className="text-center text-gray-300">We have built the technical aspects of various projects in different industries from the ground up. We are constantly researching and learning new technologies to make seamless platforms. We&apos;ve built everything from software as a service (SaaS) products, full scale custom applications and dashboards, algorithm systems, AI integration tools, to complex smart contract systems and more.</p>
                 </CardContent>
               </Card>
               <Card className="bg-blue-900/20 text-white border-blue-400/20 hover:border-blue-400/50 transition-colors">
                 <CardContent className="flex flex-col items-center p-6">
                   <Briefcase className="h-12 w-12 mb-4 text-blue-400" />
                   <h3 className="text-xl font-bold mb-2 text-center">Website Development</h3>
-                  <p className="text-center text-gray-300">We have a rich history in creating fast, responsive, and aesthetic websites for massive corporations, ecommerce brands, service professionals, startups, foundations, politicians, local businesses, and many others. Our core offer is centered around our ability to create a website that is tailored to your needs and to your brand in 24 hours, see more about this service <Link href="/websitecreation" className="text-blue-400 hover:text-blue-300">here</Link>.</p>
+                  <p className="text-center text-gray-300">We have a rich history in creating fast, responsive, and aesthetic websites for massive corporations, ecommerce brands, service professionals, startups, foundations, politicians, local businesses, and many others. Our core offer is centered around our ability to create a website that is tailored to your needs in 24 hours, see more about this service <Link href="/websitecreation" className="text-blue-400 hover:text-blue-300">here</Link>.</p>
                 </CardContent>
               </Card>
               <Card className="bg-blue-900/20 text-white border-blue-400/20 hover:border-blue-400/50 transition-colors">
