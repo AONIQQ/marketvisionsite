@@ -7,8 +7,8 @@ import ClientProvider from './ClientProvider';  // Import the client-side provid
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Aoniqq - Software Development and Consulting Services',
-  description: 'Aoniqq provides software and website development, project management, and consulting services.',
+  title: 'Market Vision - Scale with tiktok ads - No Upfront Ad Cost',
+  description: 'Market Vision is a digital marketing agency that specializes in tiktok advertising. We help businesses grow their online presence and revenue through effective and proven tiktok advertising strategies.',
 };
 
 export default function RootLayout({

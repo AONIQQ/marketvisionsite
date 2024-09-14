@@ -1,5 +1,5 @@
 {
-  "name": "aoniqq-website",
+  "name": "marketvision",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-select": "^2.1.1",
+    "@radix-ui/react-slider": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.1",
     "bcrypt": "^5.1.1",
@@ -28,8 +29,9 @@
     "react-dom": "^18",
     "react-facebook-pixel": "^1.0.4",
     "react-toastify": "^10.0.5",
+    "recharts": "^2.12.7",
     "tailwind-merge": "^2.5.2",
-    "vercel": "^28.18.5"
+    "vercel": "^37.4.2"
   },
   "devDependencies": {
     "@types/node": "^20",
