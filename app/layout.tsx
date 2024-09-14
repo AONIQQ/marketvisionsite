@@ -1,6 +1,8 @@
+// app/layout.tsx (Server Component)
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
+import ClientProvider from './ClientProvider';  // Import the client-side provider
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -71,9 +73,13 @@ export default function RootLayout({
           }}
         />
         {/* End Google Tag */}
-        
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* ClientProvider wraps all children to provide session context */}
+        <ClientProvider>
+          {children}
+        </ClientProvider>
+      </body>
     </html>
   );
 }
