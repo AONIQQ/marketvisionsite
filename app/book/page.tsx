@@ -19,7 +19,7 @@ export default function BookingPage() {
   useEffect(() => {
     if (typeof window !== 'undefined' && window.Calendly) {
       window.Calendly.initInlineWidget({
-        url: 'https://calendly.com/wall-street-vision/wall-st-vision-two-way-interview-discovery-cal-clone',
+        url: 'https://calendly.com/d/cmcz-dzg-467',
         parentElement: document.getElementById('calendly-embed'),
         prefill: {},
         utm: {}
@@ -50,9 +50,9 @@ export default function BookingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-3xl font-bold mb-6 text-center">Book Your Free Discovery Call</h1>
+          <h1 className="text-3xl font-bold mb-6 text-center">Apply To Use Market Vision</h1>
           <p className="text-lg mb-8 text-center">
-            Choose a time that works best for you, and let&apos;s discuss how we can grow your coaching business.
+            Fill out the form below to get started.
           </p>
           <div 
             id="calendly-embed" 
