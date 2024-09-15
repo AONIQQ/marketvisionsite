@@ -17,6 +17,14 @@ export default function MarketVision() {
   const [activeLayer, setActiveLayer] = useState<number | null>(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+    setIsMenuOpen(false)
+  }
+
   const calculateProfits = (sliderValue: number) => {
     const minSpend = 1000
     const maxSpend = 500000
@@ -97,19 +105,6 @@ export default function MarketVision() {
     { label: "Profit Per TikTok", before: "$488", after: "$2,200" },
   ]
 
-  const sliderMarks = [
-    { value: 0, label: '1k' },
-    { value: 11.14, label: '2k' },
-    { value: 22.28, label: '4k' },
-    { value: 33.42, label: '8k' },
-    { value: 44.56, label: '16k' },
-    { value: 55.70, label: '32k' },
-    { value: 66.84, label: '64k' },
-    { value: 77.98, label: '128k' },
-    { value: 89.12, label: '256k' },
-    { value: 100, label: '500k' },
-  ]
-
   const layers = [
     {
       title: "Cold Outreach Ads",
@@ -154,51 +149,51 @@ export default function MarketVision() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
-    <header className="px-4 lg:px-6 h-16 flex items-center justify-center bg-black/20 backdrop-blur-lg">
-      <nav className="flex justify-between items-center w-full max-w-7xl">
-        <div className="text-2xl font-bold text-white">Market Vision</div>
-        <div className="sm:hidden">
-          <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <Menu className="h-6 w-6" />
-          </Button>
-        </div>
-        <div className="hidden sm:flex gap-4 sm:gap-6">
-          <a className="text-sm font-medium hover:text-white transition-colors" href="#how-it-works">
-            How It Works
-          </a>
-          <a className="text-sm font-medium hover:text-white transition-colors" href="#case-study">
-            Track Record
-          </a>
-          <a className="text-sm font-medium hover:text-white transition-colors" href="/book">
-            Apply To Work With Us
-          </a>
-        </div>
-      </nav>
-    </header>
-    <AnimatePresence>
-      {isMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="sm:hidden absolute top-16 left-0 right-0 bg-purple-800/90 backdrop-blur-lg z-50"
-        >
-          <div className="flex flex-col items-center py-4">
-            <a className="text-sm font-medium hover:text-white transition-colors py-2" href="#how-it-works" onClick={() => setIsMenuOpen(false)}>
-              How It Works
-            </a>
-            <a className="text-sm font-medium hover:text-white transition-colors py-2" href="#case-study" onClick={() => setIsMenuOpen(false)}>
-              Case Study
-            </a>
-            <a className="text-sm font-medium hover:text-white transition-colors py-2" href="/book" onClick={() => setIsMenuOpen(false)}>
-              Book A Call
-            </a>
+      <header className="px-4 lg:px-6 h-16 flex items-center justify-center bg-black/20 backdrop-blur-lg fixed w-full z-50">
+        <nav className="flex justify-between items-center w-full max-w-7xl">
+          <div className="text-2xl font-bold text-white">Market Vision</div>
+          <div className="sm:hidden">
+            <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <Menu className="h-6 w-6" />
+            </Button>
           </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-    <main className="flex-1 flex flex-col items-center">
-      <section className="w-full min-h-[calc(100vh-4rem)] py-12 md:py-24 lg:py-32 xl:py-48 flex flex-col justify-center items-center bg-[url('/texture-bg.png')] bg-cover bg-center relative">
+          <div className="hidden sm:flex gap-4 sm:gap-6">
+            <button className="text-sm font-medium hover:text-white transition-colors" onClick={() => scrollToSection('how-it-works')}>
+              How It Works
+            </button>
+            <button className="text-sm font-medium hover:text-white transition-colors" onClick={() => scrollToSection('case-study')}>
+              Track Record
+            </button>
+            <Link href="/book" className="text-sm font-medium hover:text-white transition-colors">
+              Apply To Work With Us
+            </Link>
+          </div>
+        </nav>
+      </header>
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="sm:hidden fixed top-16 left-0 right-0 bg-purple-800/90 backdrop-blur-lg z-40"
+          >
+            <div className="flex flex-col items-center py-4">
+              <button className="text-sm font-medium hover:text-white transition-colors py-2" onClick={() => scrollToSection('how-it-works')}>
+                How It Works
+              </button>
+              <button className="text-sm font-medium hover:text-white transition-colors py-2" onClick={() => scrollToSection('case-study')}>
+                Results
+              </button>
+              <Link href="/book" className="text-sm font-medium hover:text-white transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
+                Book A Call
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    <main className="flex-1 flex flex-col items-center pt-16">
+    <section className="w-full min-h-[calc(100vh-4rem)] py-8 md:py-16 lg:py-24 xl:py-32 flex flex-col justify-center items-center bg-[url('/texture-bg.png')] bg-cover bg-center relative">
         <div className="container px-4 md:px-6 max-w-7xl">
           <div className="flex flex-col items-center space-y-8 text-center">
             <motion.h1 
@@ -215,7 +210,7 @@ export default function MarketVision() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Without you covering ad costs, posting three times a day on TikTok, or going viral.
+              Even if you&apos;re stuck in "TikTok jail", or just tired of making three TikToks per day and trying to go viral...
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -252,77 +247,80 @@ export default function MarketVision() {
         </motion.div>
       </section>
       <section id="why-ads-fail" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
-        <div className="container px-4 md:px-6 max-w-7xl">
-          <div className="flex flex-col items-center space-y-8">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-white">
-              Why Most People Fail At Running Ads
-            </h2>
-            <div className="flex flex-col lg:flex-row gap-8 w-full">
-              <div className="lg:w-1/2 w-full bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20 shadow-xl">
-                <div className="space-y-4 relative">
-                  {layers.map((layer, index) => (
-                    <motion.div 
-                      key={index}
-                      className={`bg-gradient-to-r ${layer.color} p-4 rounded-lg ${index === 1 ? 'opacity-30' : ''}`}
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: index === 1 ? 0.3 : 1, x: 0 }}
-                      transition={{ delay: index * 0.2 }}
-                    >
-                      <h4 className="text-lg font-semibold mb-2 flex items-center">
-                        <layer.icon className="h-6 w-6 mr-2" />
-                        {layer.title}
-                      </h4>
-                      <p className="text-sm">{layer.description}</p>
-                    </motion.div>
-                  ))}
-                  <motion.div
-                    className="absolute inset-0 flex items-center justify-center pointer-events-none"
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 1.5, duration: 0.5 }}
-                  >
-                    <div className="bg-red-500 text-white px-2.5 py-2.5 rounded-full font-bold">
-                      People Skip This! :(
-                    </div>
-                  </motion.div>
-                </div>
-                <motion.div 
-                  className="mt-4 p-4 bg-red-500/20 rounded-lg border-2 border-red-500"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 2 }}
-                >
-                  <p className="text-sm font-bold flex items-center">
-                    <XCircle className="h-5 w-5 mr-2 text-red-500" />
-                    Problem: The prospect likely will not buy your service or even show up to your sales call.
-                  </p>
-                  <p className="text-sm mt-2">RESULT: Your ad money goes down the drain.</p>
-                </motion.div>
+  <div className="container px-4 md:px-6 max-w-7xl">
+    <div className="flex flex-col items-center space-y-8">
+      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-white mb-8">
+        Why Most People Fail At Running Ads
+      </h2>
+      <div className="flex flex-col lg:flex-row gap-8 w-full items-center">
+        <div className="lg:w-1/2 w-full bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20 shadow-xl">
+          <div className="space-y-4 relative">
+            {layers.map((layer, index) => (
+              <motion.div 
+                key={index}
+                className={`bg-gradient-to-r ${layer.color} p-4 rounded-lg ${index === 1 ? 'opacity-30' : ''}`}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: index === 1 ? 0.3 : 1, x: 0 }}
+                transition={{ delay: index * 0.2 }}
+              >
+                <h4 className="text-lg font-semibold mb-2 flex items-center">
+                  <layer.icon className="h-6 w-6 mr-2" />
+                  {layer.title}
+                </h4>
+                <p className="text-sm">{layer.description}</p>
+              </motion.div>
+            ))}
+            <motion.div
+              className="absolute inset-0 flex items-center justify-center pointer-events-none"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.5, duration: 0.5 }}
+            >
+              <div className="bg-red-500 text-white px-2.5 py-2.5 rounded-full font-bold">
+                People Skip This! :(
               </div>
-              <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl mb-12 lg:mb-0 lg:w-1/2">
-                <CardContent className="p-6 space-y-4">
-                  <p className="text-base text-gray-200">
-                    Many people think running ads is simple—just throw money at it and wait for sales. But most ads fail because they try to get people who have never heard of them to book a call and buy their program immediately.
-                  </p>
-                  <p className="text-base text-gray-200">
-                    It doesn&apos;t work like that. Think of it like dating—you wouldn&apos;t propose marriage on the first date. Ads need to build a relationship step by step, nurturing trust until the big decision feels natural.
-                  </p>
-                  <p className="text-base text-gray-200">
-                    The process isn&apos;t complicated, but it has to be done just the right way.
-                  </p>
-                  <div className="text-center mt-6">
-                <Link href="/book" className="w-full">
-                  <Button className="py-6 text-xl bg-white text-purple-900 hover:bg-gray-200 transition-colors shadow-lg">
-                    Apply To Work With Us <ChevronRight className="ml-2 h-6 w-6" />
-                  </Button>
-                </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            </motion.div>
+          </div>
+          <motion.div 
+            className="mt-4 p-4 bg-red-500/20 rounded-lg border-2 border-red-500"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2 }}
+          >
+            <p className="text-sm font-bold flex items-center">
+              <XCircle className="h-10 w-10 mr-2 text-red-500" />
+              Problem: The prospect booked a call but doesn&apos;t actually know who you are or how you can help them.
+            </p>
+            <p className="text-sm mt-2">Result: You have a 30% show rate and 10% close rate... and unprofitable ads.</p>
+          </motion.div>
+        </div>
+        <div className="lg:w-1/2 flex flex-col justify-center items-center space-y-8">
+          <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl">
+            <CardContent className="p-6 space-y-4">
+              <p className="text-base text-gray-200">
+                Most ads fail because businesses try to get people who have never heard of them to book a call and buy their program immediately.
+              </p>
+              <p className="text-base text-gray-200">
+                It doesn&apos;t work like that. Think of it like dating—you wouldn&apos;t propose marriage on the first date. Ads need to build a relationship step by step, nurturing trust until the big decision feels natural.
+              </p>
+              <p className="text-base text-gray-200">
+                Running ads isn&apos;t complicated, but it has to be done just the right way.
+              </p>
+            </CardContent>
+          </Card>
+          <div className="text-center w-full">
+            <Link href="/book" className="w-full">
+              <Button className="w-full py-6 text-xl bg-white text-purple-900 hover:bg-gray-200 transition-colors shadow-lg">
+                Apply To Work With Us <ChevronRight className="ml-2 h-6 w-6" />
+              </Button>
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
       <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
         <div className="container px-4 md:px-6 mx-auto">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
@@ -362,31 +360,33 @@ export default function MarketVision() {
                 </motion.div>
               </div>
             </div>
-            <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl mb-12 lg:mb-0 lg:w-1/2">
-              <CardContent className="p-6 space-y-4">
-                <p className="text-base text-gray-200">
-                  You&apos;ve had videos go viral, but eventually, TikTok stops pushing them. With ads, we can keep that content in front of people and drive the actions we want. No need to keep pushing out three tiktoks per day and hoping they go viral.
-                </p>
-                <p className="text-base text-gray-200">
-                  But you can&apos;t expect someone to see an ad once and buy immediately—it&apos;s about pacing the relationship so by the time they get on the call, they&apos;re already sold on working with you.
-                </p>
-                <div className="text-center mt-6">
-                <Link href="/book" className="w-full">
-                  <Button className="py-6 text-xl bg-white text-purple-900 hover:bg-gray-200 transition-colors shadow-lg">
-                    Apply To Work With Us <ChevronRight className="ml-2 h-6 w-6" />
-                  </Button>
-                </Link>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+            <div className="lg:w-1/2 flex flex-col justify-center items-center space-y-8">
+        <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl">
+          <CardContent className="p-6 space-y-4">
+            <p className="text-base text-gray-200">
+              You&apos;ve already gone viral. TikTok just decided to stop showing new people. Instead of continuing to push out three TikToks per day hoping to go viral again, we can keep your existing content in front of people and drive the actions we want by linking viewers directly to your website.
+            </p>
+            <p className="text-base text-gray-200">
+              But you can&apos;t expect someone to see an ad once and buy immediately—it&apos;s about pacing the relationship so by the time they get on the call, they&apos;re already sold on working with you.
+            </p>
+          </CardContent>
+        </Card>
+        <div className="text-center w-full">
+          <Link href="/book" className="w-full">
+            <Button className="w-full py-6 text-xl bg-white text-purple-900 hover:bg-gray-200 transition-colors shadow-lg">
+              Apply To Work With Us <ChevronRight className="ml-2 h-6 w-6" />
+            </Button>
+          </Link>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
         <section id="case-study" className="w-full py-12 md:py-24 lg:py-32 flex justify-center bg-gradient-to-b from-transparent to-black/30">
       <div className="container px-4 md:px-6 max-w-7xl">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
-          What Happened When We Plugged In Market Vision To Our Other Business
+          What Happens When You Use Our System?
         </h2>
         <div className="bg-white/10 p-6 rounded-lg mb-8 backdrop-blur-sm border border-white/20 shadow-xl">
           <ResponsiveContainer width="100%" height={400}>
