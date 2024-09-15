@@ -224,7 +224,7 @@ export default function MarketVision() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Even if you&apos;re in TikTok jail, or just tired of making three Tiktoks per day hoping to go viral...
+              Even if you&apos;re stuck in TikTok jail, or just tired of making three Tiktoks per day hoping to go viral...
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
