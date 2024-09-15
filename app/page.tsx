@@ -139,7 +139,7 @@ export default function MarketVision() {
     },
     {
       title: "Layer Two - Nurturing",
-      description: "Increase the &quot;Know, Like, Trust&quot; factor of your viewers, educate them about your offer and pre-sell them to buy.",
+      description: "Increase the Know, Like, Trust factor of your viewers, educate them about your offer and pre-sell them to buy.",
       icon: Heart,
       color: "from-indigo-600 to-purple-600"
     },

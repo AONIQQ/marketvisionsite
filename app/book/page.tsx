@@ -6,25 +6,31 @@ declare global {
   }
 }
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft, Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import Script from 'next/script'
-import { Loader2 } from 'lucide-react'
 
 export default function BookingPage() {
   const [isCalendlyReady, setIsCalendlyReady] = useState(false)
+  const calendlyContainerRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.Calendly) {
+  const initCalendly = () => {
+    if (typeof window !== 'undefined' && window.Calendly && calendlyContainerRef.current) {
       window.Calendly.initInlineWidget({
         url: 'https://calendly.com/d/cmcz-dzg-467',
-        parentElement: document.getElementById('calendly-embed'),
+        parentElement: calendlyContainerRef.current,
         prefill: {},
         utm: {}
       })
       setIsCalendlyReady(true)
+    }
+  }
+
+  useEffect(() => {
+    if (window.Calendly) {
+      initCalendly()
     }
   }, [])
 
@@ -32,8 +38,8 @@ export default function BookingPage() {
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
       <Script
         src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
-        onLoad={() => setIsCalendlyReady(true)}
+        strategy="beforeInteractive"
+        onLoad={initCalendly}
         onError={(e) => console.error('Error loading Calendly script:', e)}
       />
       <header className="px-4 lg:px-6 h-16 flex items-center justify-center bg-black/20 backdrop-blur-lg">
@@ -55,7 +61,7 @@ export default function BookingPage() {
             Fill out the form below to get started.
           </p>
           <div 
-            id="calendly-embed" 
+            ref={calendlyContainerRef}
             className="w-full aspect-[3/2] min-h-[500px] relative bg-white/5 rounded-lg overflow-hidden"
           >
             {!isCalendlyReady && (
