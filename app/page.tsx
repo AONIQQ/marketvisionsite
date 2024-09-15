@@ -58,28 +58,28 @@ export default function MarketVision() {
   }, [])
 
   const caseStudyData = [
-    { month: "Oct &apos;22", revenue: 0 },
-    { month: "Nov &apos;22", revenue: 37500 },
-    { month: "Dec &apos;22", revenue: 47500 },
-    { month: "Jan &apos;23", revenue: 47500 },
-    { month: "Feb &apos;23", revenue: 62500 },
-    { month: "Mar &apos;23", revenue: 102500 },
-    { month: "Apr &apos;23", revenue: 122500 },
-    { month: "May &apos;23", revenue: 132500 },
-    { month: "Jun &apos;23", revenue: 177500 },
-    { month: "Jul &apos;23", revenue: 192500 },
-    { month: "Aug &apos;23", revenue: 215000, marketVisionStart: true },
-    { month: "Sep &apos;23", revenue: 265000 },
-    { month: "Oct &apos;23", revenue: 302500 },
-    { month: "Nov &apos;23", revenue: 347500 },
-    { month: "Dec &apos;23", revenue: 370000 },
-    { month: "Jan &apos;24", revenue: 392500 },
-    { month: "Feb &apos;24", revenue: 407500 },
-    { month: "Mar &apos;24", revenue: 441250 },
-    { month: "Apr &apos;24", revenue: 531250 },
-    { month: "May &apos;24", revenue: 553750 },
-    { month: "Jun &apos;24", revenue: 576250 },
-    { month: "Jul &apos;24", revenue: 583750 },
+    { month: "Oct 2022", revenue: 0 },
+    { month: "Nov 2022", revenue: 37500 },
+    { month: "Dec 2022", revenue: 47500 },
+    { month: "Jan 2023", revenue: 47500 },
+    { month: "Feb 2023", revenue: 62500 },
+    { month: "Mar 2023", revenue: 102500 },
+    { month: "Apr 2023", revenue: 122500 },
+    { month: "May 2023", revenue: 132500 },
+    { month: "Jun 2023", revenue: 177500 },
+    { month: "Jul 2023", revenue: 192500 },
+    { month: "Aug 2023", revenue: 215000, marketVisionStart: true },
+    { month: "Sep 2023", revenue: 265000 },
+    { month: "Oct 2023", revenue: 302500 },
+    { month: "Nov 2023", revenue: 347500 },
+    { month: "Dec 2023", revenue: 370000 },
+    { month: "Jan 2024", revenue: 392500 },
+    { month: "Feb 2024", revenue: 407500 },
+    { month: "Mar 2024", revenue: 441250 },
+    { month: "Apr 2024", revenue: 531250 },
+    { month: "May 2024", revenue: 553750 },
+    { month: "Jun 2024", revenue: 576250 },
+    { month: "Jul 2024", revenue: 583750 },
   ]
 
   const keyImprovements = [
@@ -288,7 +288,7 @@ export default function MarketVision() {
               />
               <Legend />
               <Line type="monotone" dataKey="revenue" stroke="#4ade80" strokeWidth={3} name="Cumulative Revenue" />
-              <ReferenceLine x="Aug &apos;23" stroke="red" label={{ value: "Market Vision Start", position: 'top', fill: '#ffffff' }} />
+              <ReferenceLine x="Aug 2023" stroke="red" label={{ value: "Market Vision Start", position: 'top', fill: '#ffffff' }} />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -450,7 +450,7 @@ export default function MarketVision() {
                       </motion.h4>
                       <p className="text-base">
                         {aspect === 'Offer' && 'You serve a specific avatar solving their problem for a price of $5000 or higher.'}
-                        {aspect === 'Marketing' && 'You&apos;ve dialed in your organic TikTok content to generate leads, though consistency might still be a challenge.'}
+                        {aspect === 'Marketing' && 'You have dialed in your organic TikTok content to generate leads, though consistency might still be a challenge.'}
                         {aspect === 'Sales' && 'You or your sales reps maintain a 25% close rate. You may be satisfied with your process or exploring ways to improve it.'}
                       </p>
                     </div>
