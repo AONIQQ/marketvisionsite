@@ -7,8 +7,11 @@ import ClientProvider from './ClientProvider';  // Import the client-side provid
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Market Vision - Scale with tiktok ads - No Upfront Ad Cost',
+  title: 'Scale with tiktok ads',
   description: 'Market Vision is a digital marketing agency that specializes in tiktok advertising. We help businesses grow their online presence and revenue through effective and proven tiktok advertising strategies.',
+icons: {
+  icon: '/favicon.ico',
+},
 };
 
 export default function RootLayout({
