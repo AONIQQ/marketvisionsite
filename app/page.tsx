@@ -127,7 +127,7 @@ export default function MarketVision() {
       color: "from-purple-600 to-indigo-600"
     },
     {
-      title: "?? :O ??",
+      title: "Nurturing",
       description: "",
       icon: Heart,
       color: "from-indigo-600 to-purple-600"
@@ -149,7 +149,7 @@ export default function MarketVision() {
     },
     {
       title: "Layer Two - Nurturing",
-      description: "Increase the Know, Like, Trust factor of your viewers, educate them about your offer and pre-sell them to buy.",
+      description: "Increase the know, like, trust factor of your viewers by re-targeting viewers with your best converting videos without waiting for TikTok to show them to more people organically.",
       icon: Heart,
       color: "from-indigo-600 to-purple-600"
     },
@@ -260,7 +260,191 @@ export default function MarketVision() {
           </svg>
         </motion.div>
       </section>
-      <section id="why-ads-fail" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
+        <section id="case-study" className="w-full py-12 md:py-24 lg:py-32 flex justify-center bg-gradient-to-b from-transparent to-black/30">
+      <div className="container px-4 md:px-6 max-w-7xl">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
+          I can make this claim because I got these results with the Triple Layer Ad System when scaling my own business.
+        </h2>
+        <div className="bg-white/10 p-6 rounded-lg mb-8 backdrop-blur-sm border border-white/20 shadow-xl">
+          <ResponsiveContainer width="100%" height={400}>
+            <LineChart data={caseStudyData} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#ffffff40" />
+              <XAxis dataKey="month" stroke="#ffffff" padding={{ left: 30, right: 30 }} />
+              <YAxis stroke="#ffffff" tickFormatter={(value) => `$${value.toLocaleString()}`} />
+              <Tooltip 
+                contentStyle={{ backgroundColor: '#1e1e1e', border: 'none' }}
+                itemStyle={{ color: '#ffffff' }}
+                formatter={(value) => [`$${value.toLocaleString()}`, "Cumulative Revenue"]}
+              />
+              <Legend />
+              <Line type="monotone" dataKey="revenue" stroke="#4ade80" strokeWidth={3} name="Cumulative Revenue" />
+              <ReferenceLine x="Aug 2023" stroke="red" label={{ value: "Triple Layer Ad System Implemented Here", position: 'top', fill: '#ffffff' }} />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card className="bg-gradient-to-br from-indigo-600 to-purple-600 border-2 border-white/20 shadow-xl overflow-hidden">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-4 text-white text-center">Results from Triple Layer Ad System</h3>
+              <div className="space-y-4">
+                {results.map((item, index) => (
+                  <div 
+                    key={index}
+                    className="bg-white/10 p-4 rounded-lg"
+                  >
+                    <p className="text-lg font-semibold text-white mb-2 text-center">{item.label}</p>
+                    <div className="flex justify-between items-center">
+                      <div className="text-center">
+                        <p className="text-lg font-bold text-red-500 mb-1">Before</p>
+                        <p className="text-3xl font-bold text-white">{item.before}</p>
+                      </div>
+                      <ArrowRight className="h-16 w-16 text-green-400 mx-4" />
+                      <div className="text-center">
+                        <p className="text-lg font-bold text-green-500 mb-1">After</p>
+                        <p className="text-3xl font-bold text-white">
+                          {item.after}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="bg-gradient-to-br from-purple-600 to-indigo-600 border-2 border-white/20 shadow-xl overflow-hidden">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-4 text-white text-center">Key Improvements</h3>
+              <div className="grid grid-cols-2 gap-6">
+                {keyImprovements.map((item, index) => (
+                  <div 
+                    key={index}
+                    className="bg-white/10 p-6 rounded-lg flex flex-col items-center justify-center h-full"
+                  >
+                    <item.icon className="h-16 w-16 text-white mb-4" />
+                    <p className="text-lg font-semibold text-white text-center mb-2">{item.label}</p>
+                    <p className="text-4xl font-bold text-green-400">
+                      {item.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
+          <div className="container px-4 md:px-6 max-w-7xl">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
+              I&apos;ll do the same for you guaranteed, or your money-back 100%. 
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl">
+                <CardContent className="p-6 space-y-6">
+                  <p className="text-lg text-gray-200">
+                  The reason I can make this offer is simple. If your business is already generating leads and sales organically, then my system can quickly scale your results by plugging in our proven copy-and-paste process. </p>
+                  <p className="text-lg text-gray-200">
+                  Once you&apos;ve validated your offer, we can confidently step in, front your ad spend, and guarantee results. You&apos;ve proven your business works—now it&apos;s time to take it to the next level with our ad system.
+                  </p>
+                  <p className="text-lg text-gray-200">
+                  We do require your business to meet certain metrics before we guarantee success. Apply below to see if our system will work for you.
+                  </p>
+                  <div className="text-center">
+                  <Link href="/book" className="w-full">
+                  <Button className="py-6 text-xl bg-white text-purple-900 hover:bg-gray-200 transition-colors shadow-lg">
+                    Apply To Work With Us <ChevronRight className="ml-2 h-6 w-6" />
+                  </Button>
+                </Link>
+                </div>
+                </CardContent>
+              </Card>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20 shadow-xl">
+                <h3 className="text-2xl font-bold mb-6 text-center">Will you be accepted to Market Vision?</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {['Offer', 'Marketing', 'Sales'].map((aspect, index) => (
+                    <div key={index} className="bg-white/20 p-4 rounded-lg text-center">
+                      <motion.h4 
+                        className="text-xl font-semibold mb-2 text-purple-300"
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                      >
+                        {aspect}
+                      </motion.h4>
+                      <p className="text-base">
+                        {aspect === 'Offer' && 'You serve a specific avatar solving their problem for a price of $5000 or higher.'}
+                        {aspect === 'Marketing' && 'You have dialed in your organic TikTok content to generate leads, though consistency might still be a challenge.'}
+                        {aspect === 'Sales' && 'You or your sales reps maintain a 25% close rate. You may be satisfied with your process or exploring ways to improve it.'}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
+        <div className="container px-4 md:px-6 mx-auto">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
+            How the Triple-Layer TT Ads System Works
+          </h2>
+          <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="lg:w-1/2 space-y-8">
+              <div className="w-full bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20 shadow-xl">
+                <div className="space-y-4">
+                  {layers2.map((layer, index) => (
+                    <motion.div 
+                      key={index}
+                      className={`bg-gradient-to-r ${layer.color} p-4 rounded-lg ${index === 1 ? 'opacity-30' : ''}`}
+                      initial={{ opacity: 0, x: -50 }}
+                      animate={{ opacity: index === 1 ? 1 : 1, x: 0 }}
+                      transition={{ delay: index * 0.2 }}
+                    >
+                      <h4 className="text-lg font-semibold mb-2 flex items-center">
+                        <layer.icon className="h-6 w-6 mr-2" />
+                        {layer.title}
+                      </h4>
+                      <p className="text-sm">{layer.description}</p>
+                    </motion.div>
+                  ))}
+                </div>
+                <motion.div 
+                  className="mt-4 p-4 bg-green-500/20 rounded-lg border-2 border-green-500"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 2 }}
+                >
+                  <p className="text-sm font-bold flex items-center">
+                    <CheckCircle className="h-5 w-5 mr-2 text-green-500" />
+                    Congrats. Your prospect is pre-sold and ready to buy.
+                  </p>
+                  <p className="text-sm mt-2">Outcome: You double your business with half the effort.</p>
+                </motion.div>
+              </div>
+            </div>
+            <div className="lg:w-1/2 flex flex-col justify-center items-center space-y-8">
+              <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl">
+                <CardContent className="p-6 space-y-4">
+                  <p className="text-base text-gray-200">
+                    You&apos;ve had videos go viral, but eventually, TikTok stops pushing them. With ads, we can keep that content in front of people and drive the actions we want. No need to keep pushing out three tiktoks per day and hoping they go viral.
+                  </p>
+                  <p className="text-base text-gray-200">
+                    But you can&apos;t expect someone to see an ad once and buy immediately—it&apos;s about pacing the relationship so by the time they get on the call, they&apos;re already sold on working with you.
+                  </p>
+                </CardContent>
+              </Card>
+              <div className="text-center w-full">
+                <Link href="/book" className="w-full">
+                  <Button className="w-full py-6 text-xl bg-white text-purple-900 hover:bg-gray-200 transition-colors shadow-lg">
+                    Apply To Work With Us <ChevronRight className="ml-2 h-6 w-6" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section id="why-ads-fail" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
         <div className="container px-4 md:px-6 max-w-7xl">
           <div className="flex flex-col items-center space-y-8">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-white mb-8">
@@ -334,191 +518,6 @@ export default function MarketVision() {
           </div>
         </div>
       </section>
-      <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
-        <div className="container px-4 md:px-6 mx-auto">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
-            How the Triple-Layer TT Ads System Works
-          </h2>
-          <div className="flex flex-col lg:flex-row gap-8 items-center">
-            <div className="lg:w-1/2 space-y-8">
-              <div className="w-full bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20 shadow-xl">
-                <div className="space-y-4">
-                  {layers2.map((layer, index) => (
-                    <motion.div 
-                      key={index}
-                      className={`bg-gradient-to-r ${layer.color} p-4 rounded-lg ${index === 1 ? 'opacity-30' : ''}`}
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: index === 1 ? 1 : 1, x: 0 }}
-                      transition={{ delay: index * 0.2 }}
-                    >
-                      <h4 className="text-lg font-semibold mb-2 flex items-center">
-                        <layer.icon className="h-6 w-6 mr-2" />
-                        {layer.title}
-                      </h4>
-                      <p className="text-sm">{layer.description}</p>
-                    </motion.div>
-                  ))}
-                </div>
-                <motion.div 
-                  className="mt-4 p-4 bg-green-500/20 rounded-lg border-2 border-green-500"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 2 }}
-                >
-                  <p className="text-sm font-bold flex items-center">
-                    <CheckCircle className="h-5 w-5 mr-2 text-green-500" />
-                    Congrats. Your prospect is pre-sold and ready to buy.
-                  </p>
-                  <p className="text-sm mt-2">Outcome: You double your business with half the effort.</p>
-                </motion.div>
-              </div>
-            </div>
-            <div className="lg:w-1/2 flex flex-col justify-center items-center space-y-8">
-              <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl">
-                <CardContent className="p-6 space-y-4">
-                  <p className="text-base text-gray-200">
-                    You&apos;ve had videos go viral, but eventually, TikTok stops pushing them. With ads, we can keep that content in front of people and drive the actions we want. No need to keep pushing out three tiktoks per day and hoping they go viral.
-                  </p>
-                  <p className="text-base text-gray-200">
-                    But you can&apos;t expect someone to see an ad once and buy immediately—it&apos;s about pacing the relationship so by the time they get on the call, they&apos;re already sold on working with you.
-                  </p>
-                </CardContent>
-              </Card>
-              <div className="text-center w-full">
-                <Link href="/book" className="w-full">
-                  <Button className="w-full py-6 text-xl bg-white text-purple-900 hover:bg-gray-200 transition-colors shadow-lg">
-                    Apply To Work With Us <ChevronRight className="ml-2 h-6 w-6" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-        <section id="case-study" className="w-full py-12 md:py-24 lg:py-32 flex justify-center bg-gradient-to-b from-transparent to-black/30">
-      <div className="container px-4 md:px-6 max-w-7xl">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
-          Results Before and After Using Our System
-        </h2>
-        <div className="bg-white/10 p-6 rounded-lg mb-8 backdrop-blur-sm border border-white/20 shadow-xl">
-          <ResponsiveContainer width="100%" height={400}>
-            <LineChart data={caseStudyData} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#ffffff40" />
-              <XAxis dataKey="month" stroke="#ffffff" padding={{ left: 30, right: 30 }} />
-              <YAxis stroke="#ffffff" tickFormatter={(value) => `$${value.toLocaleString()}`} />
-              <Tooltip 
-                contentStyle={{ backgroundColor: '#1e1e1e', border: 'none' }}
-                itemStyle={{ color: '#ffffff' }}
-                formatter={(value) => [`$${value.toLocaleString()}`, "Cumulative Revenue"]}
-              />
-              <Legend />
-              <Line type="monotone" dataKey="revenue" stroke="#4ade80" strokeWidth={3} name="Cumulative Revenue" />
-              <ReferenceLine x="Aug 2023" stroke="red" label={{ value: "Market Vision Start", position: 'top', fill: '#ffffff' }} />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="bg-gradient-to-br from-purple-600 to-indigo-600 border-2 border-white/20 shadow-xl overflow-hidden">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-4 text-white text-center">Key Improvements</h3>
-              <div className="grid grid-cols-2 gap-6">
-                {keyImprovements.map((item, index) => (
-                  <div 
-                    key={index}
-                    className="bg-white/10 p-6 rounded-lg flex flex-col items-center justify-center h-full"
-                  >
-                    <item.icon className="h-16 w-16 text-white mb-4" />
-                    <p className="text-lg font-semibold text-white text-center mb-2">{item.label}</p>
-                    <p className="text-4xl font-bold text-green-400">
-                      {item.value}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="bg-gradient-to-br from-indigo-600 to-purple-600 border-2 border-white/20 shadow-xl overflow-hidden">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-4 text-white text-center">Results</h3>
-              <div className="space-y-4">
-                {results.map((item, index) => (
-                  <div 
-                    key={index}
-                    className="bg-white/10 p-4 rounded-lg"
-                  >
-                    <p className="text-lg font-semibold text-white mb-2 text-center">{item.label}</p>
-                    <div className="flex justify-between items-center">
-                      <div className="text-center">
-                        <p className="text-lg font-bold text-red-500 mb-1">Before</p>
-                        <p className="text-3xl font-bold text-white">{item.before}</p>
-                      </div>
-                      <ArrowRight className="h-16 w-16 text-green-400 mx-4" />
-                      <div className="text-center">
-                        <p className="text-lg font-bold text-green-500 mb-1">After</p>
-                        <p className="text-3xl font-bold text-white">
-                          {item.after}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </section>
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
-          <div className="container px-4 md:px-6 max-w-7xl">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
-              How Can We Possibly Offer A 100% Money-Back Guarantee?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl">
-                <CardContent className="p-6 space-y-6">
-                  <p className="text-lg text-gray-200">
-                  Before jumping into paid ads, it&apos;s crucial to refine your business using organic marketing first. This ensures that your offer resonates with your audience, your messaging grabs attention, and you know how to confidently close sales over the phone.                   </p>
-                  <p className="text-lg text-gray-200">
-                  Once you&apos;ve done this groundwork, we can confidently plug in our proven ad system, front your ad-spend, and guarantee results. We know your business works, so now it&apos;s time to do what we know works to scale.
-                  </p>
-                  <p className="text-lg text-gray-200">
-                  We require your business to meet certain metrics so that we can guarantee success. Apply below to see if our system may work for you. 
-                  </p>
-                  <div className="text-center">
-                  <Link href="/book" className="w-full">
-                  <Button className="py-6 text-xl bg-white text-purple-900 hover:bg-gray-200 transition-colors shadow-lg">
-                    Apply To Work With Us <ChevronRight className="ml-2 h-6 w-6" />
-                  </Button>
-                </Link>
-                </div>
-                </CardContent>
-              </Card>
-              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20 shadow-xl">
-                <h3 className="text-2xl font-bold mb-6 text-center">Will you be accepted to Market Vision?</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {['Offer', 'Marketing', 'Sales'].map((aspect, index) => (
-                    <div key={index} className="bg-white/20 p-4 rounded-lg text-center">
-                      <motion.h4 
-                        className="text-xl font-semibold mb-2 text-purple-300"
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: index * 0.2 }}
-                      >
-                        {aspect}
-                      </motion.h4>
-                      <p className="text-base">
-                        {aspect === 'Offer' && 'You serve a specific avatar solving their problem for a price of $5000 or higher.'}
-                        {aspect === 'Marketing' && 'You have dialed in your organic TikTok content to generate leads, though consistency might still be a challenge.'}
-                        {aspect === 'Sales' && 'You or your sales reps maintain a 25% close rate. You may be satisfied with your process or exploring ways to improve it.'}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* <section id="pricing" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
           <div className="container px-4 md:px-6 max-w-7xl">
