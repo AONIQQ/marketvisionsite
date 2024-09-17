@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Slider } from "@/components/ui/slider"
 import { Input } from "@/components/ui/input"
-import { ChevronRight, DollarSign, BarChart, Users, TrendingUp, ChevronUp, Video, Percent, ArrowRight, ChevronDown, Heart, PhoneCall, CheckCircle, XCircle, Menu } from "lucide-react"
+import { ChevronRight, DollarSign, BarChart, Users, TrendingUp, ChevronUp, Video, Percent, ArrowRight, ChevronDown, Heart, PhoneCall, CheckCircle, XCircle, Menu, Instagram, MessageCircle, Play, Twitter, Coins, Music } from "lucide-react"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine } from 'recharts'
 import Link from "next/link"
 
@@ -39,6 +39,18 @@ export default function MarketVision() {
     }
     setIsMenuOpen(false)
   }
+
+  const musicLayers = [
+    { icon: Instagram, label: "Layer 1: Instagram Ads", value: "$10K spent" },
+    { icon: Users, label: "Layer 2: Nurture Followers on Page", value: "50K followers" },
+    { icon: Play, label: "Layer 3: Push Followers to Spotify", value: "3M+ plays" }
+  ]
+
+  const nftLayers = [
+    { icon: Twitter, label: "Layer 1: Twitter Ads", value: "$50K spent" },
+    { icon: MessageCircle, label: "Layer 2: Nurture Members in Discord", value: "25K members" },
+    { icon: DollarSign, label: "Layer 3: Drive NFT Sales", value: "$2.7M revenue" }
+  ]
 
   const handleInputChange = (value: string, type: 'adSpend' | 'revenue' | 'clientProfit') => {
     const numValue = parseInt(value.replace(/,/g, ''), 10)
@@ -216,7 +228,7 @@ export default function MarketVision() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              We Will Double Your Monthly Revenue in 90 Days With Our Triple Layer TikTok Ad System
+              Learn How I Doubled My Monthly Revenue With My Triple Layer TikTok Ad System
             </motion.h1>
             <motion.p 
               className="mx-auto max-w-[700px] text-xl md:text-2xl text-gray-200 drop-shadow"
@@ -224,7 +236,7 @@ export default function MarketVision() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Even if you&apos;re stuck in TikTok jail, or just tired of making three Tiktoks per day hoping to go viral...
+              And how you can too… without any added effort, going viral, or wasting money on ineffective ads.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -333,56 +345,6 @@ export default function MarketVision() {
         </div>
       </div>
     </section>
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
-          <div className="container px-4 md:px-6 max-w-7xl">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
-              I&apos;ll do the same for you guaranteed, or your money-back 100%. 
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl">
-                <CardContent className="p-6 space-y-6">
-                  <p className="text-lg text-gray-200">
-                  The reason I can make this offer is simple. If your business is already generating leads and sales organically, then my system can quickly scale your results by plugging in our proven copy-and-paste process. </p>
-                  <p className="text-lg text-gray-200">
-                  Once you&apos;ve validated your offer, we can confidently step in, front your ad spend, and guarantee results. You&apos;ve proven your business works—now it&apos;s time to take it to the next level with our ad system.
-                  </p>
-                  <p className="text-lg text-gray-200">
-                  We do require your business to meet certain metrics before we guarantee success. Apply below to see if our system will work for you.
-                  </p>
-                  <div className="text-center">
-                  <Link href="/book" className="w-full">
-                  <Button className="py-6 text-xl bg-white text-purple-900 hover:bg-gray-200 transition-colors shadow-lg">
-                    Apply To Work With Us <ChevronRight className="ml-2 h-6 w-6" />
-                  </Button>
-                </Link>
-                </div>
-                </CardContent>
-              </Card>
-              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20 shadow-xl">
-                <h3 className="text-2xl font-bold mb-6 text-center">Will you be accepted to Market Vision?</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {['Offer', 'Marketing', 'Sales'].map((aspect, index) => (
-                    <div key={index} className="bg-white/20 p-4 rounded-lg text-center">
-                      <motion.h4 
-                        className="text-xl font-semibold mb-2 text-purple-300"
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: index * 0.2 }}
-                      >
-                        {aspect}
-                      </motion.h4>
-                      <p className="text-base">
-                        {aspect === 'Offer' && 'You serve a specific avatar solving their problem for a price of $5000 or higher.'}
-                        {aspect === 'Marketing' && 'You have dialed in your organic TikTok content to generate leads, though consistency might still be a challenge.'}
-                        {aspect === 'Sales' && 'You or your sales reps maintain a 25% close rate. You may be satisfied with your process or exploring ways to improve it.'}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
         <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
         <div className="container px-4 md:px-6 mx-auto">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
@@ -444,6 +406,123 @@ export default function MarketVision() {
           </div>
         </div>
       </section>
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
+        <div className="container px-4 md:px-6 max-w-7xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
+            These Same Principles Were Applied Across Multiple Industries In Multiple Mediums
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl overflow-hidden">
+              <CardContent className="p-6">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-6">
+                    <Music className="h-12 w-12 text-purple-400" />
+                    <div className="text-right">
+                      <h3 className="text-xl font-bold text-white">Music Industry Success</h3>
+                      <p className="text-sm text-gray-300">Courierclub band case study</p>
+                    </div>
+                  </div>
+                  <div className="flex-grow space-y-4">
+                    {musicLayers.map((layer, index) => (
+                      <div key={index} className="flex items-center justify-between bg-white/5 rounded-lg p-3">
+                        <div className="flex items-center">
+                          <layer.icon className="h-5 w-5 text-purple-400 mr-2" />
+                          <span className="text-sm font-medium text-white">{layer.label}</span>
+                        </div>
+                        <span className="text-sm font-bold text-green-400">{layer.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl overflow-hidden">
+              <CardContent className="p-6">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-6">
+                    <Coins className="h-12 w-12 text-yellow-400" />
+                    <div className="text-right">
+                      <h3 className="text-xl font-bold text-white">Crypto NFT Project</h3>
+                      <p className="text-sm text-gray-300">Explosive growth case study</p>
+                    </div>
+                  </div>
+                  <div className="flex-grow space-y-4">
+                    {nftLayers.map((layer, index) => (
+                      <div key={index} className="flex items-center justify-between bg-white/5 rounded-lg p-3">
+                        <div className="flex items-center">
+                          <layer.icon className="h-5 w-5 text-yellow-400 mr-2" />
+                          <span className="text-sm font-medium text-white">{layer.label}</span>
+                        </div>
+                        <span className="text-sm font-bold text-green-400">{layer.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-xl text-gray-200 mb-6">
+              These examples demonstrate how our Triple Layer System drives success across various industries.
+            </p>
+            <Link href="/book">
+              <Button className="py-6 px-8 text-xl bg-white text-purple-900 hover:bg-gray-200 transition-colors shadow-lg">
+                Apply To Work With Us <ChevronRight className="ml-2 h-6 w-6" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
+          <div className="container px-4 md:px-6 max-w-7xl">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
+              I&apos;ll do the same for you guaranteed, or your money-back 100%. 
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl">
+                <CardContent className="p-6 space-y-6">
+                  <p className="text-lg text-gray-200">
+                  The reason I can make this offer is simple. If your business is already generating leads and sales organically, then my system can quickly scale your results by plugging in our proven copy-and-paste process. </p>
+                  <p className="text-lg text-gray-200">
+                  Once you&apos;ve validated your offer, we can confidently step in, front your ad spend, and guarantee results. You&apos;ve proven your business works—now it&apos;s time to take it to the next level with our ad system.
+                  </p>
+                  <p className="text-lg text-gray-200">
+                  We do require your business to meet certain metrics before we guarantee success. Apply below to see if our system will work for you.
+                  </p>
+                  <div className="text-center">
+                  <Link href="/book" className="w-full">
+                  <Button className="py-6 text-xl bg-white text-purple-900 hover:bg-gray-200 transition-colors shadow-lg">
+                    Apply To Work With Us <ChevronRight className="ml-2 h-6 w-6" />
+                  </Button>
+                </Link>
+                </div>
+                </CardContent>
+              </Card>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20 shadow-xl">
+                <h3 className="text-2xl font-bold mb-6 text-center">Will you be accepted to Market Vision?</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {['Offer', 'Marketing', 'Sales'].map((aspect, index) => (
+                    <div key={index} className="bg-white/20 p-4 rounded-lg text-center">
+                      <motion.h4 
+                        className="text-xl font-semibold mb-2 text-purple-300"
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                      >
+                        {aspect}
+                      </motion.h4>
+                      <p className="text-base">
+                        {aspect === 'Offer' && 'You serve a specific avatar solving their problem for a price of $5000 or higher.'}
+                        {aspect === 'Marketing' && 'You have dialed in your organic TikTok content to generate leads, though consistency might still be a challenge.'}
+                        {aspect === 'Sales' && 'You or your sales reps maintain a 25% close rate. You may be satisfied with your process or exploring ways to improve it.'}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
     <section id="why-ads-fail" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
         <div className="container px-4 md:px-6 max-w-7xl">
           <div className="flex flex-col items-center space-y-8">
