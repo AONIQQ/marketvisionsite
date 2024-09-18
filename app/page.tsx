@@ -685,12 +685,10 @@ export default function MarketVision() {
         <div className="flex flex-col sm:flex-row justify-between items-center w-full max-w-7xl">
           <p className="text-xs text-gray-400">© 2024 Market Vision. All rights reserved.</p>
           <nav className="flex gap-4 sm:gap-6">
-            <a className="text-xs hover:text-white transition-colors text-gray-400" href="#">
-              Terms of Service
-            </a>
-            <a className="text-xs hover:text-white transition-colors text-gray-400" href="#">
-              Privacy
-            </a>
+             <p className="text-sm text-gray-400 underline cursor-pointer" onClick={() => window.open('https://www.aoniqq.com/websitecreation', '_blank')}>
+            Site by Aoniqq LLC
+          </p>
+          </nav>
           </nav>
         </div>
       </footer>
