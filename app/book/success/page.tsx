@@ -66,7 +66,6 @@ export default function BookingSuccessPage() {
   <p className="text-sm text-gray-400 underline cursor-pointer" onClick={() => window.open('https://www.aoniqq.com/websitecreation', '_blank')}>
             Site by Aoniqq LLC
           </p>
-          </nav>
       </footer>
     </div>
   )
