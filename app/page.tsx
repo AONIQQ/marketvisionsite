@@ -689,7 +689,6 @@ export default function MarketVision() {
             Site by Aoniqq LLC
           </p>
           </nav>
-          </nav>
         </div>
       </footer>
     </div>
