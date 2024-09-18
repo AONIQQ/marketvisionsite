@@ -123,6 +123,10 @@ export default function BookingPage() {
         </main>
         <footer className="py-6 text-center bg-black/20 backdrop-blur-lg">
           <p className="text-sm text-gray-400">© 2024 Market Vision. All rights reserved.</p>
+            <p className="text-sm text-gray-400 underline cursor-pointer" onClick={() => window.open('https://www.aoniqq.com/websitecreation', '_blank')}>
+            Site by Aoniqq LLC
+          </p>
+          </nav>
         </footer>
       </div>
     </>
