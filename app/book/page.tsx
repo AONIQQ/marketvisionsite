@@ -56,7 +56,7 @@ export default function LandingPage() {
             <div className="flex flex-col items-center">
               <MarketVisionLogo className="w-full max-w-[300px] sm:max-w-[400px] h-auto" />
               <p className="text-sm sm:text-base text-gray-600 text-center mt-2 sm:mt-3">
-                High Ticket Coaches on TikTok! Looking to add $100K+/m to your business while working and stressing less?
+              High Ticket Coaches on TikTok! Looking to add $100K/m+ to your business?
               </p>
             </div>
           </div>
@@ -68,7 +68,9 @@ export default function LandingPage() {
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
                 Here&apos;s how established online coaches on TikTok are earning <span className="bg-yellow-200 px-1">3-10x more money</span> from their audiences - without an exhausting daily posting schedule or <span className="bg-yellow-200 px-1">hoping to go viral to get leads</span>.
               </h1>
-
+              <p className="text-sm sm:text-base text-black mb-6 max-w-2xl mx-auto">
+                <strong>This is not a sales call.</strong> Book your two-way interview below to learn about how you can implement our triple-layer advertising system to <strong>turn your followers into qualified, ready-to-buy clients on autopilot.</strong>
+              </p>
 
               <div className="max-w-4xl mx-auto mb-8 w-full px-4 sm:px-6 lg:px-8">
                 {/* Updated Calendly embed code */}
