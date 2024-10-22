@@ -1,0 +1,155 @@
+'use client'
+import { Button } from "@/components/ui/button"
+import { Star, User } from "lucide-react"
+import Image from "next/image"
+import Head from 'next/head'
+import Script from 'next/script'
+
+const MarketVisionLogo: React.FC<{ className?: string }> = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 200 50"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="200" height="50" fill="white" />
+      <path
+        d="M20 25L30 15L40 25L50 15"
+        stroke="#4A90E2"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="40" cy="25" r="10" fill="#4A90E2" fillOpacity="0.2" />
+      <path
+        d="M35 25L38 28L45 21"
+        stroke="#4A90E2"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <text
+        x="65"
+        y="32"
+        fontFamily="Arial, sans-serif"
+        fontSize="16"
+        fontWeight="bold"
+        fill="#333333"
+      >
+        Market Vision
+      </text>
+    </svg>
+  )
+}
+
+export default function LandingPage() {
+  return (
+    <>
+      <Head>
+        <title>Market Vision - Scale Your Coaching Business with TikTok</title>
+      </Head>
+      <Script src="https://fast.wistia.com/embed/medias/878v131shp.jsonp" strategy="lazyOnload" />
+      <Script src="https://fast.wistia.com/assets/external/E-v1.js" strategy="lazyOnload" />
+      <div className="flex flex-col min-h-screen bg-white">
+        <header className="w-full py-2 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="container mx-auto">
+            <div className="flex flex-col items-center">
+              <MarketVisionLogo className="w-full max-w-[200px] h-auto" />
+            </div>
+          </div>
+        </header>
+        <main className="flex-grow">
+          <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
+            <div className="container mx-auto text-center">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
+              Step 1: Please Watch The Short Video Below To Confirm Your Call
+              </h1>
+              <div className="max-w-3xl mx-auto mb-12">
+                <div className="wistia_responsive_padding" style={{padding:'56.25% 0 0 0',position:'relative'}}>
+                  <div className="wistia_responsive_wrapper" style={{height:'100%',left:0,position:'absolute',top:0,width:'100%'}}>
+                    <div className="wistia_embed wistia_async_c6xymilggf seo=true videoFoam=false" style={{height:'360px',width:'640px',position:'relative'}}>
+                      <div className="wistia_swatch" style={{height:'100%',left:0,opacity:0,overflow:'hidden',position:'absolute',top:0,transition:'opacity 200ms',width:'100%'}}>
+                        <img src="https://fast.wistia.com/embed/medias/c6xymilggf/swatch" style={{filter:'blur(5px)',height:'100%',objectFit:'contain',width:'100%'}} alt="" aria-hidden="true" onLoad={(e) => {
+                          const parent = e.currentTarget.parentElement;
+                          if (parent) parent.style.opacity = '1';
+                        }} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+            <div className="container mx-auto text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">
+                Step Two: Read How We Helped These Past Clients
+              </h2>
+              <div className="flex justify-center items-center space-x-2 mb-12">
+                {[1, 2, 3, 4, 5].map((_, index) => (
+                  <Star key={index} className="text-yellow-400 w-8 h-8 fill-current" />
+                ))}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-gray-50 p-6 rounded-lg shadow-md text-left">
+                  <div className="flex items-center mb-4">
+                    <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/73x73-0hS1voJOl9BT5eP8TkaFBLoQo7LdO3.png" alt="Samantha Airth" width={50} height={50} className="rounded-full mr-4" />
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Samantha Airth</h3>
+                      <p className="text-sm text-gray-500">Jul 29, 2024</p>
+                    </div>
+                  </div>
+                  <h4 className="font-bold mb-2 text-gray-900">Is there an option to give a 10 star...</h4>
+                  <p className="text-gray-600">I&apos;ve been working with Steven and Ryan since March, and it&apos;s been a game-changer for me. I followed Steven&apos;s TikToks for a while before I had the capital to invest and sign up, and I&apos;m so glad I did. Investing in myself with Steven and Ryan has been the best decision ever! Steven has taught me so much about choosing stocks, using different parameters to avoid trades that won&apos;t get the results we&apos;re looking for. His insights are incredible.</p>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg shadow-md text-left">
+                  <div className="flex items-center mb-4">
+                    <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/73x73%20(1)-gwiD4gJgVDQVxuuGLNtQQ4c5MX9qax.png" alt="Andrew Wilson" width={50} height={50} className="rounded-full mr-4" />
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Andrew Wilson</h3>
+                      <p className="text-sm text-gray-500">Mar 11, 2023</p>
+                    </div>
+                  </div>
+                  <h4 className="font-bold mb-2 text-gray-900">Invest in people, not businesses ...</h4>
+                  <p className="text-gray-600">&ldquo;Invest in people, not businesses.&rdquo; said Mr. Warren Buffett. I met my financial guru, Ryan Conway, five years ago and though he never uttered the words, &ldquo;I won&apos;t let you fail.&rdquo; his actions prove otherwise. Steven is Ryan&apos;s prodigy, and serendipitously he possessed a skill set Ryan did not... bot programming. What separates this powerhouse duo is their expert level communication, an eagerness to learn new technology, a striving for excellence, and a genuine desire for others to do well.</p>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg shadow-md text-left">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+                      <User className="w-6 h-6 text-gray-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Alex Bi</h3>
+                      <p className="text-sm text-gray-500">Oct 13, 2023</p>
+                    </div>
+                  </div>
+                  <h4 className="font-bold mb-2 text-gray-900">Patient and fully transparent</h4>
+                  <p className="text-gray-600">Steven has been an excellent mentor. He&apos;s extremely patient and knowledgeable. What I love most about working with him is that he&apos;s fully transparent. He doesn&apos;t try to hide his flaws nor try to hide any flaws of the program. Which is one of the reasons that made me trust him so much. Overall Steven is a great guy to work with and I don&apos;t regret my decision one bit.</p>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg shadow-md text-left">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+                      <User className="w-6 h-6 text-gray-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Adam Yarsinsky</h3>
+                      <p className="text-sm text-gray-500">Mar 11, 2023</p>
+                    </div>
+                  </div>
+                  <h4 className="font-bold mb-2 text-gray-900">A Proven System</h4>
+                  <p className="text-gray-600">Ryan and Steven have worked very hard to create a system that benefits each person who gives them their trust. I have witnessed them use this system successfully many times over. As someone that has known them for many years, I can say that they are extremely trustworthy and will do everything they can to keep clients satisfied.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer className="w-full py-8 px-4 sm:px-6 lg:px-8 bg-white text-black">
+          <div className="container mx-auto text-center">
+            <p>&copy; {new Date().getFullYear()} Market Vision. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+    </>
+  )
+}
