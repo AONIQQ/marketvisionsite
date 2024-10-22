@@ -57,7 +57,7 @@ export default function LandingPage() {
             <div className="flex flex-col items-center">
               <MarketVisionLogo className="w-full max-w-[200px] h-auto" />
               <p className="text-sm sm:text-base text-gray-600 text-center mt-2 italic">
-                For coaches on TikTok looking to generate an extra 3-5+ qualified sales calls/day...
+                High Ticket Coaches on TikTok! Looking to add $100K/m+ to your business?
               </p>
             </div>
           </div>
