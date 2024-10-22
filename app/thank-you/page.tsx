@@ -1,5 +1,4 @@
 'use client'
-import { Button } from "@/components/ui/button"
 import { Star, User } from "lucide-react"
 import Image from "next/image"
 import Head from 'next/head'
@@ -43,13 +42,13 @@ const MarketVisionLogo: React.FC<{ className?: string }> = ({ className }) => {
   )
 }
 
-export default function LandingPage() {
+export default function ThankYouPage() {
   return (
     <>
       <Head>
-        <title>Market Vision - Scale Your Coaching Business with TikTok</title>
+        <title>Market Vision - Thank You</title>
       </Head>
-      <Script src="https://fast.wistia.com/embed/medias/878v131shp.jsonp" strategy="lazyOnload" />
+      <Script src="https://fast.wistia.com/embed/medias/c6xymilggf.jsonp" strategy="lazyOnload" />
       <Script src="https://fast.wistia.com/assets/external/E-v1.js" strategy="lazyOnload" />
       <div className="flex flex-col min-h-screen bg-white">
         <header className="w-full py-2 px-4 sm:px-6 lg:px-8 bg-white">
@@ -63,12 +62,12 @@ export default function LandingPage() {
           <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
             <div className="container mx-auto text-center">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
-              Step 1: Please Watch The Short Video Below To Confirm Your Call
+                Step 1: Please Watch The Short Video Below To Confirm Your Call
               </h1>
               <div className="max-w-3xl mx-auto mb-12">
                 <div className="wistia_responsive_padding" style={{padding:'56.25% 0 0 0',position:'relative'}}>
                   <div className="wistia_responsive_wrapper" style={{height:'100%',left:0,position:'absolute',top:0,width:'100%'}}>
-                    <div className="wistia_embed wistia_async_c6xymilggf seo=true videoFoam=false" style={{height:'360px',width:'640px',position:'relative'}}>
+                    <div className="wistia_embed wistia_async_c6xymilggf seo=true videoFoam=true" style={{height:'100%',position:'relative',width:'100%'}}>
                       <div className="wistia_swatch" style={{height:'100%',left:0,opacity:0,overflow:'hidden',position:'absolute',top:0,transition:'opacity 200ms',width:'100%'}}>
                         <img src="https://fast.wistia.com/embed/medias/c6xymilggf/swatch" style={{filter:'blur(5px)',height:'100%',objectFit:'contain',width:'100%'}} alt="" aria-hidden="true" onLoad={(e) => {
                           const parent = e.currentTarget.parentElement;
