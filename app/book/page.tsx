@@ -82,17 +82,6 @@ export default function LandingPage() {
                 ></div>
                 <Script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
               </div>
-              <div className="max-w-2xl mx-auto bg-gradient-to-r from-purple-900 to-indigo-900 rounded-lg shadow-lg p-6 text-white mt-8">
-                {/* Add any additional content here */}
-                <h2 className="text-xl font-bold mb-3">Ready to add $100K/m to your business?</h2>
-                <div className="flex justify-center">
-                <a href="/book">
-                  <Button size="lg" className="bg-white text-purple-900 hover:bg-gray-100 text-lg px-8 py-4">
-                    Book Your Two-Way Interview
-                  </Button>
-                </a>
-                </div>
-              </div>
             </div>
           </section>
 
@@ -157,15 +146,6 @@ export default function LandingPage() {
                   <p className="text-gray-600">Ryan and Steven have worked very hard to create a system that benefits each person who gives them their trust. I have witnessed them use this system successfully many times over. As someone that has known them for many years, I can say that they are extremely trustworthy and will do everything they can to keep clients satisfied.</p>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
-            <div className="container mx-auto text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-8">Ready to add $100k+/m to your business?</h2>
-              <Button size="lg" className="bg-white text-purple-900 hover:bg-gray-100 text-lg px-8 py-4">
-                Book Your Two-Way Interview
-              </Button>
             </div>
           </section>
         </main>

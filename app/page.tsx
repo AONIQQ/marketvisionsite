@@ -1,16 +1,14 @@
 'use client'
-
 import { Button } from "@/components/ui/button"
 import { Star, User } from "lucide-react"
 import Image from "next/image"
 import Head from 'next/head'
 import Script from 'next/script'
 
-const MarketVisionLogo: React.FC<{ width?: number; height?: number }> = ({ width = 200, height = 50 }) => {
+const MarketVisionLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <svg
-      width={width}
-      height={height}
+      className={className}
       viewBox="0 0 200 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -54,28 +52,25 @@ export default function LandingPage() {
       <Script src="https://fast.wistia.com/embed/medias/878v131shp.jsonp" strategy="lazyOnload" />
       <Script src="https://fast.wistia.com/assets/external/E-v1.js" strategy="lazyOnload" />
       <div className="flex flex-col min-h-screen bg-white">
-        <header className="w-full py-2 px-4 sm:px-6 lg:px-8 bg-white">
+        <header className="w-full py-4 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="container mx-auto">
             <div className="flex flex-col items-center">
-              <MarketVisionLogo width={400} height={100} /> 
-              <p className="text-xs text-gray-600 text-center mt-1">
+              <MarketVisionLogo className="w-full max-w-[400px] h-auto" />
+              <p className="text-sm sm:text-base text-gray-600 text-center mt-2">
                 For coaches on TikTok looking to generate an extra 3-5+ qualified sales calls/day...
               </p>
             </div>
           </div>
         </header>
-
         <main className="flex-grow">
-          <section className="pt-6 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
+          <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
             <div className="container mx-auto text-center">
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 max-w-4xl mx-auto leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
                 Here&apos;s how established online coaches on TikTok are earning <span className="bg-yellow-200 px-1">3-10x more money</span> from their audiences - without an exhausting daily posting schedule or <span className="bg-yellow-200 px-1">hoping to go viral to get leads</span>.
               </h1>
-
-              <p className="text-xs text-black mb-2 max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-black mb-6 max-w-2xl mx-auto">
                 <strong>Watch This Video Below</strong> to Learn About How You Can Implement Our Triple Layer Advertising System to <strong>Turn Your Followers into Qualified, Ready-to-Buy Clients on Autopilot</strong>
               </p>
-
               <div className="max-w-3xl mx-auto mb-12">
                 <div className="wistia_responsive_padding" style={{padding:'56.25% 0 0 0',position:'relative'}}>
                   <div className="wistia_responsive_wrapper" style={{height:'100%',left:0,position:'absolute',top:0,width:'100%'}}>
@@ -90,13 +85,11 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-
-              <div className="max-w-2xl mx-auto bg-gradient-to-r from-purple-900 to-indigo-900 rounded-lg shadow-lg p-6 text-white mt-8">
-             
-                <h2 className="text-xl font-bold mb-3">Ready to add $100K/m to your business?</h2>
+              <div className="max-w-2xl mx-auto bg-gradient-to-r from-purple-900 to-indigo-900 rounded-lg shadow-lg p-8 text-white mt-12">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-6">Ready to add $100K/m to your business?</h2>
                 <div className="flex justify-center">
                 <a href="/book">
-                  <Button size="lg" className="bg-white text-purple-900 hover:bg-gray-100 text-lg px-8 py-4">
+                  <Button size="lg" className="bg-white text-purple-900 hover:bg-gray-100 text-lg px-10 py-8 font-bold rounded-full leading-tight">
                     Book Your Two-Way Interview
                   </Button>
                 </a>
@@ -104,13 +97,12 @@ export default function LandingPage() {
               </div>
             </div>
           </section>
-
-          <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+          <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="container mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">
                 We&apos;re rated 5 stars on TrustPilot Across All Our Businesses
               </h2>
-              <div className="flex justify-center items-center space-x-2 mb-8">
+              <div className="flex justify-center items-center space-x-2 mb-12">
                 {[1, 2, 3, 4, 5].map((_, index) => (
                   <Star key={index} className="text-yellow-400 w-8 h-8 fill-current" />
                 ))}
@@ -167,13 +159,12 @@ export default function LandingPage() {
               </div>
             </div>
           </section>
-
-          <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
+          <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
             <div className="container mx-auto text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-8">Ready to add $100k+/m to your business?</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-12">Ready to add $100k+/m to your business?</h2>
               <div className="flex justify-center">
                 <a href="/book">
-                  <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-purple-900 px-6 py-3">
+                  <Button size="lg" className="bg-white text-purple-900 hover:bg-gray-100 text-lg px-10 py-6 font-bold rounded-full">
                     Book Your Two-Way Interview
                   </Button>
                 </a>
@@ -181,8 +172,7 @@ export default function LandingPage() {
             </div>
           </section>
         </main>
-
-        <footer className="w-full py-6 px-4 sm:px-6 lg:px-8 bg-white text-black">
+        <footer className="w-full py-8 px-4 sm:px-6 lg:px-8 bg-white text-black">
           <div className="container mx-auto text-center">
             <p>&copy; {new Date().getFullYear()} Market Vision. All rights reserved.</p>
           </div>
