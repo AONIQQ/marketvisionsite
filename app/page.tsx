@@ -33,7 +33,7 @@ const MarketVisionLogo: React.FC<{ className?: string }> = ({ className }) => {
         x="65"
         y="32"
         fontFamily="Arial, sans-serif"
-        fontSize="20"
+        fontSize="16"
         fontWeight="bold"
         fill="#333333"
       >
@@ -52,11 +52,11 @@ export default function LandingPage() {
       <Script src="https://fast.wistia.com/embed/medias/878v131shp.jsonp" strategy="lazyOnload" />
       <Script src="https://fast.wistia.com/assets/external/E-v1.js" strategy="lazyOnload" />
       <div className="flex flex-col min-h-screen bg-white">
-        <header className="w-full py-4 px-4 sm:px-6 lg:px-8 bg-white">
+        <header className="w-full py-2 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="container mx-auto">
             <div className="flex flex-col items-center">
-              <MarketVisionLogo className="w-full max-w-[400px] h-auto" />
-              <p className="text-sm sm:text-base text-gray-600 text-center mt-2">
+              <MarketVisionLogo className="w-full max-w-[200px] h-auto" />
+              <p className="text-sm sm:text-base text-gray-600 text-center mt-2 italic">
                 For coaches on TikTok looking to generate an extra 3-5+ qualified sales calls/day...
               </p>
             </div>
@@ -112,22 +112,22 @@ export default function LandingPage() {
                   <div className="flex items-center mb-4">
                     <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/73x73-0hS1voJOl9BT5eP8TkaFBLoQo7LdO3.png" alt="Samantha Airth" width={50} height={50} className="rounded-full mr-4" />
                     <div>
-                      <h3 className="font-semibold">Samantha Airth</h3>
+                      <h3 className="font-semibold text-gray-900">Samantha Airth</h3>
                       <p className="text-sm text-gray-500">Jul 29, 2024</p>
                     </div>
                   </div>
-                  <h4 className="font-bold mb-2">Is there an option to give a 10 star...</h4>
+                  <h4 className="font-bold mb-2 text-gray-900">Is there an option to give a 10 star...</h4>
                   <p className="text-gray-600">I&apos;ve been working with Steven and Ryan since March, and it&apos;s been a game-changer for me. I followed Steven&apos;s TikToks for a while before I had the capital to invest and sign up, and I&apos;m so glad I did. Investing in myself with Steven and Ryan has been the best decision ever! Steven has taught me so much about choosing stocks, using different parameters to avoid trades that won&apos;t get the results we&apos;re looking for. His insights are incredible.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg shadow-md text-left">
                   <div className="flex items-center mb-4">
                     <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/73x73%20(1)-gwiD4gJgVDQVxuuGLNtQQ4c5MX9qax.png" alt="Andrew Wilson" width={50} height={50} className="rounded-full mr-4" />
                     <div>
-                      <h3 className="font-semibold">Andrew Wilson</h3>
+                      <h3 className="font-semibold text-gray-900">Andrew Wilson</h3>
                       <p className="text-sm text-gray-500">Mar 11, 2023</p>
                     </div>
                   </div>
-                  <h4 className="font-bold mb-2">Invest in people, not businesses ...</h4>
+                  <h4 className="font-bold mb-2 text-gray-900">Invest in people, not businesses ...</h4>
                   <p className="text-gray-600">&ldquo;Invest in people, not businesses.&rdquo; said Mr. Warren Buffett. I met my financial guru, Ryan Conway, five years ago and though he never uttered the words, &ldquo;I won&apos;t let you fail.&rdquo; his actions prove otherwise. Steven is Ryan&apos;s prodigy, and serendipitously he possessed a skill set Ryan did not... bot programming. What separates this powerhouse duo is their expert level communication, an eagerness to learn new technology, a striving for excellence, and a genuine desire for others to do well.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg shadow-md text-left">
@@ -136,11 +136,11 @@ export default function LandingPage() {
                       <User className="w-6 h-6 text-gray-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Alex Bi</h3>
+                      <h3 className="font-semibold text-gray-900">Alex Bi</h3>
                       <p className="text-sm text-gray-500">Oct 13, 2023</p>
                     </div>
                   </div>
-                  <h4 className="font-bold mb-2">Patient and fully transparent</h4>
+                  <h4 className="font-bold mb-2 text-gray-900">Patient and fully transparent</h4>
                   <p className="text-gray-600">Steven has been an excellent mentor. He&apos;s extremely patient and knowledgeable. What I love most about working with him is that he&apos;s fully transparent. He doesn&apos;t try to hide his flaws nor try to hide any flaws of the program. Which is one of the reasons that made me trust him so much. Overall Steven is a great guy to work with and I don&apos;t regret my decision one bit.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg shadow-md text-left">
@@ -149,11 +149,11 @@ export default function LandingPage() {
                       <User className="w-6 h-6 text-gray-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Adam Yarsinsky</h3>
+                      <h3 className="font-semibold text-gray-900">Adam Yarsinsky</h3>
                       <p className="text-sm text-gray-500">Mar 11, 2023</p>
                     </div>
                   </div>
-                  <h4 className="font-bold mb-2">A Proven System</h4>
+                  <h4 className="font-bold mb-2 text-gray-900">A Proven System</h4>
                   <p className="text-gray-600">Ryan and Steven have worked very hard to create a system that benefits each person who gives them their trust. I have witnessed them use this system successfully many times over. As someone that has known them for many years, I can say that they are extremely trustworthy and will do everything they can to keep clients satisfied.</p>
                 </div>
               </div>
