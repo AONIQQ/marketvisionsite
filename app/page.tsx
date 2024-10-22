@@ -57,7 +57,7 @@ export default function LandingPage() {
             <div className="flex flex-col items-center">
               <MarketVisionLogo className="w-full max-w-[200px] h-auto" />
               <p className="text-sm sm:text-base text-gray-600 text-center mt-2 italic">
-                High Ticket Coaches on TikTok! Looking to add $100K/m+ to your business?
+                High Ticket Coaches on TikTok! Looking to add $100K+/m to your business while working and stressing less?
               </p>
             </div>
           </div>
