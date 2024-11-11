@@ -228,7 +228,7 @@ export default function MarketVision() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Learn How I Doubled My Monthly Revenue With My Triple Layer TikTok Ad System
+              Learn How We Doubled Our Monthly Revenue With Our Triple Layer TikTok Ad System
             </motion.h1>
             <motion.p 
               className="mx-auto max-w-[700px] text-xl md:text-2xl text-gray-200 drop-shadow"
@@ -275,7 +275,7 @@ export default function MarketVision() {
         <section id="case-study" className="w-full py-12 md:py-24 lg:py-32 flex justify-center bg-gradient-to-b from-transparent to-black/30">
       <div className="container px-4 md:px-6 max-w-7xl">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
-          I can make this claim because I got these results with the Triple Layer Ad System when scaling my own business.
+          We got these results with the Triple Layer Ad System when scaling our business.
         </h2>
         <div className="bg-white/10 p-6 rounded-lg mb-8 backdrop-blur-sm border border-white/20 shadow-xl">
           <ResponsiveContainer width="100%" height={400}>
@@ -409,7 +409,7 @@ export default function MarketVision() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
         <div className="container px-4 md:px-6 max-w-7xl">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
-            These Same Principles Were Applied Across Multiple Industries In Multiple Mediums
+            We Have Succesfully Applied These Same Principles Across Multiple Industries In Multiple Mediums
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl overflow-hidden">
@@ -419,7 +419,7 @@ export default function MarketVision() {
                     <Music className="h-12 w-12 text-purple-400" />
                     <div className="text-right">
                       <h3 className="text-xl font-bold text-white">Music Industry Success</h3>
-                      <p className="text-sm text-gray-300">Courierclub band case study</p>
+                      <p className="text-sm text-gray-300">Courier Club band case study</p>
                     </div>
                   </div>
                   <div className="flex-grow space-y-4">
@@ -442,7 +442,7 @@ export default function MarketVision() {
                   <div className="flex items-center justify-between mb-6">
                     <Coins className="h-12 w-12 text-yellow-400" />
                     <div className="text-right">
-                      <h3 className="text-xl font-bold text-white">Crypto NFT Project</h3>
+                      <h3 className="text-xl font-bold text-white">Web3 Startup</h3>
                       <p className="text-sm text-gray-300">Explosive growth case study</p>
                     </div>
                   </div>
@@ -476,18 +476,18 @@ export default function MarketVision() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black/30 to-transparent flex justify-center">
           <div className="container px-4 md:px-6 max-w-7xl">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-white">
-              I&apos;ll do the same for you guaranteed, or your money-back 100%. 
+              We will do the same for you - guaranteed, or 100% of your money-back.
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <Card className="bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl">
                 <CardContent className="p-6 space-y-6">
                   <p className="text-lg text-gray-200">
-                  The reason I can make this offer is simple. If your business is already generating leads and sales organically, then my system can quickly scale your results by plugging in our proven copy-and-paste process. </p>
+                  The reason we can make this offer is simple. If your business is already generating leads and sales organically, then our system can quickly scale your results by plugging in our proven methodology. </p>
                   <p className="text-lg text-gray-200">
-                  Once you&apos;ve validated your offer, we can confidently step in, front your ad spend, and guarantee results. You&apos;ve proven your business works—now it&apos;s time to take it to the next level with our ad system.
+                  Once you&apos;ve validated your offer, we can confidently step in and guarantee results. You&apos;ve proven your business works — now it&apos;s time to take it to the next level with our ad system.
                   </p>
                   <p className="text-lg text-gray-200">
-                  We do require your business to meet certain metrics before we guarantee success. Apply below to see if our system will work for you.
+                  We do require your business to meet certain metrics before we take you on as a client, as we only accept a limited amount of people who looking to work with us. Apply below to see if our system will work for you.
                   </p>
                   <div className="text-center">
                   <Link href="/book" className="w-full">
